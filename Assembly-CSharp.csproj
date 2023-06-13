@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{19E0A624-9AF9-69D7-4EA8-ED232B1EA98C}</ProjectGuid>
+    <ProjectGuid>{15706AE6-195F-71B3-09EE-388D8A9190FB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,17 +56,17 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Restart.cs" />
     <Compile Include="Assets\Scripts\Ninja\vitoria.cs" />
+    <Compile Include="Assets\Scripts\EnemyTeleport.cs" />
     <Compile Include="Assets\Scripts\Ninja\Bomba.cs" />
     <Compile Include="Assets\HUD\PlayerVida.cs" />
     <Compile Include="Assets\Scripts\Ninja\InputHandler.cs" />
     <Compile Include="Assets\Scripts\Soldiers\ScriptBullet.cs" />
     <Compile Include="Assets\Scripts\Graph_generation.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Ninja\TopDownCharacterMover.cs" />
     <Compile Include="Assets\Scripts\Agent_navigation.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\EnemyTeleport.cs" />
-    <Compile Include="Assets\Scripts\Restart.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

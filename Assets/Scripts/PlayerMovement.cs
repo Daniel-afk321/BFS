@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 movement = transform.forward * input * moveSpeed * Time.deltaTime;
         tankRigidbody.MovePosition(tankRigidbody.position + movement);
+        animator.SetBool("run", true);
     }
 
     private void RotateTank(float input)
@@ -58,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
         float rotation = input * rotationSpeed * Time.deltaTime;
         Quaternion deltaRotation = Quaternion.Euler(0f, rotation, 0f);
         tankRigidbody.MoveRotation(tankRigidbody.rotation * deltaRotation);
+        animator.SetBool("run", false);
     }
 
     private void OnTriggerEnter(Collider other)
