@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class vitoria : MonoBehaviour
 {
+    public AudioSource audioVictory;
     public GameObject panel; 
 
     private void OnCollisionEnter(Collision collision)
@@ -11,7 +12,8 @@ public class vitoria : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Time.timeScale = 0; 
-            panel.SetActive(true); 
+            panel.SetActive(true);
+            audioVictory.Play();
         }
     }
 }

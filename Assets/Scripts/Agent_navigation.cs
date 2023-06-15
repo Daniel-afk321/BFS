@@ -28,6 +28,11 @@ public class Agent_navigation : MonoBehaviour
     private bool isSpeedModified = false;
     private float originalSpeed;
 
+    //pedro
+    [SerializeField] private AudioSource passosAudioSource;
+    [SerializeField] private AudioClip[] passosAudioClip;
+    public AudioSource audioShot;
+
     private void Start()
     {
         waypoints = graphGeneration.wayPoints;
@@ -100,8 +105,10 @@ public class Agent_navigation : MonoBehaviour
         bulletTime = Timer;
 
         GameObject bulletObj = Instantiate(enemyBullet, SpawnPoint.transform.position, SpawnPoint.transform.rotation) as GameObject;
+        audioShot.Play();
         Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
         bulletRig.AddForce(bulletRig.transform.forward * enemySpeed);
+
         Destroy(bulletObj, 4f);
     }
 
@@ -130,6 +137,11 @@ public class Agent_navigation : MonoBehaviour
                 isSpeedModified = false;
             }
         }
+    }
+
+    private void Passos()
+    {
+        passosAudioSource.PlayOneShot(passosAudioClip[Random.Range(0, passosAudioClip.Length)]);
     }
 }
 

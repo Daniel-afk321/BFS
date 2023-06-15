@@ -12,8 +12,8 @@ public class Bomba : MonoBehaviour
     public float vfxDuration = 6f;
 
     private int spawnCount = 0;
-    public Text bombCountText; 
-
+    public Text bombCountText;
+    public AudioSource bomba;
     private void Start()
     {
         UpdateBombCountText();
@@ -26,7 +26,7 @@ public class Bomba : MonoBehaviour
             SpawnBomba();
             SpawnVFX();
             spawnCount++;
-
+            bomba.Play();
             if (spawnCount >= maxSpawnCount)
             {
                 enabled = false;

@@ -12,6 +12,10 @@ public class PlayerMovement : MonoBehaviour
     public float Health;
     public Slider HealthBar;
     public GameObject GameOver;
+    private bool isMoving = false;
+    //pedro
+    public AudioSource audioPlayer;
+    
 
     private void Awake()
     {
@@ -30,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Time.timeScale = 0f;
             GameOver.SetActive(true);
+            
             animator.SetBool("dead", true);
         }
         else
@@ -51,7 +56,17 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 movement = transform.forward * input * moveSpeed * Time.deltaTime;
         tankRigidbody.MovePosition(tankRigidbody.position + movement);
-        animator.SetBool("run", true);
+        if (input != 0)
+        {
+            animator.SetBool("run", true);
+            isMoving = true;
+        }
+        else
+        {
+            animator.SetBool("run", false);
+            isMoving = false;
+        }
+
     }
 
     private void RotateTank(float input)
@@ -59,15 +74,21 @@ public class PlayerMovement : MonoBehaviour
         float rotation = input * rotationSpeed * Time.deltaTime;
         Quaternion deltaRotation = Quaternion.Euler(0f, rotation, 0f);
         tankRigidbody.MoveRotation(tankRigidbody.rotation * deltaRotation);
-        animator.SetBool("run", false);
+        if (isMoving)
+        {
+            animator.SetBool("run", true);
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Tiro")
         {
+            audioPlayer.Play();
             Health -= 10;
             HealthBar.value = Health;
+
         }
     }
 
@@ -75,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.layer.Equals(8))
         {
+            audioPlayer.Play();
             Health -= 10;
             HealthBar.value = Health;
         }
