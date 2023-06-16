@@ -8,10 +8,13 @@ ScriptsOnlyBuild:
     - PlayerMovement
     - Restart
     - ScriptBullet
+    - cena
     - vitoria
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineComposer
+    - Cinemachine.CinemachineFreeLook
+    - Cinemachine.CinemachineOrbitalTransposer
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineTransposer
     - Cinemachine.CinemachineVirtualCamera
@@ -45,7 +48,123 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/cena.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1522}
+    - Class: 114
+      Script: {instanceID: 2350}
+    - Class: 114
+      Script: {instanceID: 2792}
+    - Class: 114
+      Script: {instanceID: 2976}
+    - Class: 114
+      Script: {instanceID: 3240}
+    - Class: 114
+      Script: {instanceID: 3494}
+    - Class: 114
+      Script: {instanceID: 3630}
+    - Class: 114
+      Script: {instanceID: 19010}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/credito.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1522}
+    - Class: 114
+      Script: {instanceID: 1866}
+    - Class: 114
+      Script: {instanceID: 2350}
+    - Class: 114
+      Script: {instanceID: 2792}
+    - Class: 114
+      Script: {instanceID: 2976}
+    - Class: 114
+      Script: {instanceID: 3240}
+    - Class: 114
+      Script: {instanceID: 3494}
+    - Class: 114
+      Script: {instanceID: 3630}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/game.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -64,8 +183,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 64
@@ -75,6 +192,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -91,6 +212,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1522}
     - Class: 114
+      Script: {instanceID: 1786}
+    - Class: 114
       Script: {instanceID: 1796}
     - Class: 114
       Script: {instanceID: 1866}
@@ -98,6 +221,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2158}
     - Class: 114
       Script: {instanceID: 2350}
+    - Class: 114
+      Script: {instanceID: 2584}
     - Class: 114
       Script: {instanceID: 2738}
     - Class: 114
@@ -277,7 +402,7 @@ ScriptsOnlyBuild:
     className: CinemachineCollider
   - hash:
       serializedVersion: 2
-      Hash: 235a1e8275c5d1ab2a1c0f017d90e1b5
+      Hash: 063408eab1c6c87fe37af778735d01e5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: vitoria
@@ -511,7 +636,7 @@ ScriptsOnlyBuild:
     className: Cinemachine3rdPersonFollow
   - hash:
       serializedVersion: 2
-      Hash: 45280d46f2c582c4518db32d0a8a1364
+      Hash: e071fd1f378cba9cd47619d581ebf532
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Bomba
@@ -781,7 +906,7 @@ ScriptsOnlyBuild:
     className: Graph_generation
   - hash:
       serializedVersion: 2
-      Hash: 9e57d62e55679939030f733c149f26c8
+      Hash: b8fea4974588f9579d09969c8d863227
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -1003,11 +1128,19 @@ ScriptsOnlyBuild:
     className: CinemachineBlendListCamera
   - hash:
       serializedVersion: 2
-      Hash: af2ce7066bf37033b1f1af7b30ecb202
+      Hash: d14f0f5fde650f8a7266185b186d6835
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Agent_navigation
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cena
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/danie/Downloads/tes/Path finding.exe
+  - Assets/Scenes/cena.unity
+  - Assets/Scenes/game.unity
+  - Assets/Scenes/credito.unity
+  playerPath: C:/Users/danie/Downloads/Game/Path finding.exe

@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Ninja\TopDownCharacterMover.cs" />
     <Compile Include="Assets\Scripts\Agent_navigation.cs" />
+    <Compile Include="Assets\Scenes\cena.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

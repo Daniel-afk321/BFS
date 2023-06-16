@@ -13,6 +13,6 @@ public class Restart : MonoBehaviour
     public void GoToMainMenu()
     {
         
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("cena");
     }
 }
